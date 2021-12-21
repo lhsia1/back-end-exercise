@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import pojo.Book;
 import pojo.Library;
 
+import java.util.List;
+
 @RestController
 public class LibraryController {
     Library library = new Library();
@@ -28,7 +30,7 @@ public class LibraryController {
 
     @GetMapping("/api/books")
     @ResponseStatus(code = HttpStatus.OK)
-    public Book[] getBooks(){
+    public List<Book> getBooks(){
         return library.getBooks();
     }
 

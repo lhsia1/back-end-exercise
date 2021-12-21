@@ -1,6 +1,7 @@
 package pojo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Library {
 
@@ -23,8 +24,8 @@ public class Library {
         return book;
     }
 
-    public Book[] getBooks() {
-        return books.toArray(new Book[0]);
+    public ArrayList<Book> getBooks() {
+        return books;
     }
 
     public void deleteAllBooks(){
