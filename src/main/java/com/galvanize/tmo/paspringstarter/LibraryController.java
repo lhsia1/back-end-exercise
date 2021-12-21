@@ -30,8 +30,8 @@ public class LibraryController {
 
     @GetMapping("/api/books")
     @ResponseStatus(code = HttpStatus.OK)
-    public List<Book> getBooks(){
-        return library.getBooks();
+    public Library getBooks(){
+        return library;
     }
 
     @DeleteMapping("/api/books")
