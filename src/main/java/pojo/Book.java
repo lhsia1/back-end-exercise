@@ -1,6 +1,6 @@
 package pojo;
 
-public class Book {
+public class Book implements Comparable<Book>{
     public int id;
     public String author;
     public String title;
@@ -38,4 +38,11 @@ public class Book {
     }
 
     public int yearPublished;
+
+    @Override
+    public int compareTo(Book otherBook) {
+        String currTitle = this.getTitle();
+        String otherTitle = otherBook.getTitle();
+        return currTitle.compareTo(otherTitle);
+    }
 }

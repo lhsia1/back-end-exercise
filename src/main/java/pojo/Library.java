@@ -25,6 +25,7 @@ public class Library {
     }
 
     public ArrayList<Book> getBooks() {
+        Collections.sort(books);
         return books;
     }
 
