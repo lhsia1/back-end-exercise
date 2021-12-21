@@ -1,11 +1,10 @@
 package pojo;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Library {
 
-    private HashMap<Integer, Book> books;
+    private ArrayList<Book> books;
     private static int book_id = 1;
 
     private int genBookId() {
@@ -15,17 +14,17 @@ public class Library {
     }
 
     public Library() {
-        books = new HashMap<>();
+        books = new ArrayList<>();
     }
 
     public Book addBook(Book book) {
         book.setId(genBookId());
-        books.put(book.getId(), book);
+        books.add(book);
         return book;
     }
 
     public Book[] getBooks() {
-        return books.values().toArray(new Book[0]);
+        return books.toArray(new Book[0]);
     }
 
     public void deleteAllBooks(){
